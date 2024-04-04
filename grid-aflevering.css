@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui;
+}
+
+.grid-container {
+    margin: 15px auto;
+    padding: 15px;
+    display: grid;
+    gap: 15px;
+    grid-template-areas: 
+    "nav nav"
+    "main main"
+    "sct sct1"
+    "sect sect1"
+    "secti secti1"
+    "footer footer";
+}
+
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    background: #ddd;
+    border: 2px solid black;
+    padding: 15px;
+    grid-area: nav;
+}
+
+.logo, .nav {
+    padding: 10px;
+    border: 2px solid black;
+    font-size: 2em;
+}
+
+img {
+    width: 100%;
+}
+
+
+
+.one {
+    grid-area: main;
+    padding: 15px;
+    border: 2px solid black;
+    font-size: 2em;
+}
+
+.one p {
+    padding: 15px;
+}
+
+
+.two {
+    grid-area: sct;
+    padding: 15px;
+    border: 2px solid black;
+    font-size: 2em;
+}
+
+.three {
+    grid-area: sct1;
+    padding: 15px;
+    border: 2px solid black;
+    font-size: 2em;
+}
+
+.four {
+    grid-area: sect;
+    padding: 15px;
+    border: 2px solid black;
+    font-size: 2em;
+}
+
+.five {
+    grid-area: sect1;
+    padding: 15px;
+    border: 2px solid black;
+    font-size: 2em;
+}
+
+.six {
+    grid-area: secti;
+    padding: 15px;
+    border: 2px solid black;
+    font-size: 2em;
+}
+
+.seven {
+    grid-area: secti1;
+    padding: 15px;
+    border: 2px solid black;
+    font-size: 2em;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+    font-size: 2em;
+    padding: 15px;
+    border: 2px solid black;
+}
+
+@media screen and (min-width: 768px) {
+    .grid-container {
+        grid-template-areas: 
+        "nav    nav    nav"
+        "main   main   main"
+        "sct    sct1   sect"
+        "sect1  secti  secti1"
+        "footer footer footer";
+    }
+}
+
+@media screen and (min-width: 1064px) {
+    .grid-container {
+        grid-template-areas: 
+        "nav nav nav"
+        "main main ."
+        "main main sct"
+        "sct1 sect sect"
+        ". sect sect"
+        "sect1 secti secti1"
+        "footer footer footer";
+    }
+}
